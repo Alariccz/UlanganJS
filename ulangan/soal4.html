@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olahraga</title>
+</head>
+<body>
+    <h1>Jenis Olahraga</h1>
+    <button onclick="tampilkanInformasi()" style="padding: 10px 20px; font-size: 12px; background-color: #70c8eb; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Tampilkan Informasi</button>
+
+    <script>
+        function tampilkanInformasi() {
+            let sports = ["renang", "basket", "voly", "sepak bola", "bulu tangkis"];
+            
+            let sportsInfo = {
+                renang: "Non-bola",
+                basket: "Bola",
+                voly: "Bola",
+                "sepak bola": "Bola",
+                "bulu tangkis": "Non-bola"
+            };
+            
+            let scores = [1, 2, 3, 4, 5];
+            
+            function totalScore(scores) {
+                return scores.reduce((total, score) => total + score, 0);
+            }
+            
+            alert("Jenis Olahraga:\n" + sports.join(", "));
+            
+            let info = "";
+            sports.forEach(sport => {
+                info += `${sport} adalah olahraga ${sportsInfo[sport]}\n`;
+            });
+            alert("Informasi Jenis Olahraga:\n" + info);
+            
+            alert("Hasil Pertandingan:\n" + scores.join(", "));
+            
+            let total = totalScore(scores);
+            alert(`Total Score: ${total}`);
+        }
+    </script>
+</body>
+</html>

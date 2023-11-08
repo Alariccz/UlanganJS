@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keliling Jajargenjang</title>
+</head>
+
+<body>
+    <h1>Menghitung Keliling Jajargenjang</h1>
+    <label for="sisiA">Panjang Sisi A:</label>
+    <input type="number" id="sisiA"><br><br>
+
+    <label for="sisiB">Panjang Sisi B:</label>
+    <input type="number" id="sisiB"><br><br>
+
+    <button onclick="hitungKeliling()" style="padding: 10px 20px; font-size: 12px; background-color: #70c8eb; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Hitung Keliling</button>
+
+    <script>
+        function hitungKeliling() {
+            let sisiA = parseFloat(document.getElementById("sisiA").value);
+            let sisiB = parseFloat(document.getElementById("sisiB").value);
+
+            if (!isNaN(sisiA) && !isNaN(sisiB)) {
+                let keliling = 2 * (sisiA + sisiB);
+                alert(`Keliling jajargenjang adalah: ${keliling}`);
+            } else {
+                alert("Masukkan angka valid untuk panjang sisi A dan B.");
+            }
+        }
+    </script>
+</body>
+
+</html>

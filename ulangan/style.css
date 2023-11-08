@@ -1,0 +1,25 @@
+html {
+    background-color:rgb(107, 122, 150);
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #70c8eb; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #1a571d; 
+}
+
+.container{
+    display: flex;
+    border-radius: 10px;
+    padding: 10px, 20px;
+    gap: 1rem;
+}

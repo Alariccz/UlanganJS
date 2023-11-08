@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas Segitiga</title>
+</head>
+<body>
+    <button onclick="hitungLuasSegitiga()" style="padding: 10px 20px; font-size: 12px; background-color: #70c8eb; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Hitung Luas Segitiga</button>
+
+    <script>
+        function hitungLuasSegitiga() {
+            let alas = parseFloat(prompt("Masukkan nilai alas segitiga:"));
+            let tinggi = parseFloat(prompt("Masukkan nilai tinggi segitiga:"));
+
+            if (!isNaN(alas) && !isNaN(tinggi)) {
+                let luas = 0.5 * alas * tinggi;
+
+                alert(`Luas segitiga adalah: ${luas}`);
+            } else {
+                alert("Input tidak valid. Harap masukkan angka.");
+            }
+        }
+    </script>
+</body>
+</html>

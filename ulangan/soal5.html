@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Seragam</title>
+</head>
+<body>
+    <h1>Seragam dalam satu minggu</h1>
+    <label for="hari">Pilih Hari:</label>
+    <select id="hari" onchange="tampilkanSeragam()">
+        <option value="senin">Senin</option>
+        <option value="selasa">Selasa</option>
+        <option value="rabu">Rabu</option>
+        <option value="kamis">Kamis</option>
+        <option value="jumat">Jumat</option>
+        <option value="sabtu">Sabtu</option>
+        <option value="minggu">Minggu</option>
+    </select>
+
+    <script>
+        function tampilkanSeragam() {
+            const hari = document.getElementById("hari").value;
+            let seragam = "";
+
+            switch (hari) {
+                case "senin":
+                    seragam = "kemeja putih, bawahan biru";
+                    break;
+                case "selasa":
+                    seragam = "kemeja abu abu, bawahan abu abu";
+                    break;
+                case "rabu":
+                    seragam = "kemeja batik, bawahan hitam";
+                    break;
+                case "kamis":
+                    seragam = "kemeja praktek, bawahan item";
+                    break;
+                case "jumat":
+                    seragam = "kemeja pramuka, bawahan coklat";
+                    break;
+                default:
+                    seragam = "Tidak ada informasi untuk hari ini.";
+            }
+
+            console.log(`Hari ${hari}: ${seragam}`);
+        }
+    </script>
+</body>
+</html>

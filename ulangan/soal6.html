@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Tahun Kabisat</title>
+</head>
+
+<body>
+    <h1>Cek Tahun Kabisat</h1>
+    <label for="tahun">Masukkan Tahun:</label>
+    <input type="number" id="tahun"><br><br>
+
+    <button onclick="cekTahun()">Cek Tahun</button>
+
+    <script>
+        function cekTahun() {
+            let tahun = parseInt(document.getElementById("tahun").value);
+
+            if (!isNaN(tahun)) {
+                if (tahun % 4 !== 0) {
+                    alert(`${tahun} bukan tahun kabisat.`);
+                } else {
+                    alert(`${tahun} adalah tahun kabisat.`);
+                }
+            } else {
+                alert("Masukkan angka tahun yang valid.");
+            }
+        }
+    </script>
+</body>
+
+</html>
